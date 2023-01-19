@@ -6,47 +6,65 @@ import java.io.IOException;
 
 import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 
 public class Main {
-    static int[] step;
-    static String[] map;
-    static int ans_double = 0;
+
     public static void main(String[] arg) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String str = br.readLine();
-        int n = Integer.parseInt(str);
-        map = new String[n];
-        step = new int[n];
-        String map_val = br.readLine();
-        for (int i = 0; i < n; i++) {
-            map[i] = map_val.substring(i, i + 1);
-        }
-        for (int i = 0; i < n; i++) {
-            detection(i, map[i], n);
-        }
-        for (int i = 0; i < n; i++) {
-            System.out.println("step[i] = " + step[i]);
-            if (step[i] >= n) {
-                ans_double += 1;
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+                String str = br.readLine();
+                int n = Integer.parseInt(str);
+                int[] arr = new int[12]; // 방향 기록
+                int gaRo = 0;
+                int seRo = 0;
+                StringBuffer nums = new StringBuffer("");
+                for(int i=0; i<6; i++){
+                    String input = br.readLine();
+                    String[] inputs = input.split(" ");
+                    nums.append(inputs[0]);
+                    int v = Integer.parseInt(inputs[0]);
+                    int s = Integer.parseInt(inputs[1]);
+                    arr[i] = s;
+                    arr[i+6] = s;
+                    if(v == 4 || v== 3){
+                        if(s>=seRo){
+                            seRo = s;
+                        }
+                    }
+                    if(v == 1 || v == 2 ){
+                        if(s>=gaRo){
+                            gaRo = s;
+                        }
+                    }
+                }
+                int a=0;
+                int b=0;
+                nums.append(nums);
+//        System.out.println("nums = " + nums);
+                List<String> objects = Arrays.asList("1313","2323","1414","2424","3131","4141","3232","4242");
+                for(int i=0; i<8; i++){
+                    String s = objects.get(i);
+                    int idx = nums.indexOf(s);
+//            System.out.println("s = " + s);
+                    if(idx!=-1){
+//            System.out.println(idx);
+                        a = idx+1;
+                        b=  idx+2;
+                        if(a>=6){
+                            a = a-6;
+                            b = b-6;
+                        }
+                        break;
+                    }
+                }
+                int square = gaRo * seRo;
+                int total = square - (arr[a]*arr[b]);
+//                System.out.println(a);
+//                System.out.println(b);
+                System.out.println(total * n);
             }
         }
 
-        System.out.println(ans_double / 2);
-    }
 
-    public static void detection(int idx, String s, int n) {
-        if (step[idx] >= n) {
-            return;
-        }
-        step[idx] += 1;
-        if (s.equals("E")) {
-            String l = map[idx + 1];
-            detection(idx + 1, l, n);
-        } else {
-            String l = map[idx - 1];
-            detection(idx - 1, l, n);
-        }
-    }
-}
