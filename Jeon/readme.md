@@ -51,7 +51,9 @@ DP - 실패
 
 어렵다.. 실패 ㅠㅡㅠ
 
-![image](https://user-images.githubusercontent.com/77326600/213872296-0fd47263-4ad7-4652-ad13-0d5f012a51d8.png)
+정답 코드
+![image](https://user-images.githubusercontent.com/77326600/213872758-ee2911ae-f5b5-458a-b827-9511758da85a.png)
+
 
 손코딩으로 써보니 이해가 되었다. 각 원소에서 이전 원소들에 대한 검증을 싹 다 해야한다. 재귀함수를 만들어서, dp 배열이 비어있을 경우에만 함수를 실행하도록 하고
 비어있지 않은 경우에는 바로 계산해둔 dp 값을 리턴하게 하여 문제를 해결할 수 있다.
