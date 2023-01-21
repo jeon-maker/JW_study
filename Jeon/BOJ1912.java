@@ -5,7 +5,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class BOJ1912 {
-    public void solution() throws IOException{
+    static int[] arr;
+    static Integer[] dp;
+    static int max;
+    public void wrong_solution() throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String str = br.readLine();
         int n = Integer.parseInt(str);
@@ -31,6 +34,32 @@ public class BOJ1912 {
         }
         System.out.println(max);
 
+    }
 
+    public void solution() throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String str = br.readLine();
+        int n = Integer.parseInt(str);
+        String input = br.readLine();
+        String[] inputs = input.split(" ");
+        Long[] num = new Long[n];
+        arr = new int[n];
+        dp = new Integer[n];
+        for(int i=0; i<n; i++){
+            arr[i] = Integer.parseInt(inputs[i]);
+        }
+        dp[0] = arr[0];
+        max = arr[0];
+        dp_(n-1);
+        System.out.println(max);
+    }
+    static int dp_(int k) {
+
+        if(dp[k] == null){
+            dp[k] = Math.max(dp_(k-1) + arr[k] , arr[k]);
+
+            max = Math.max(dp[k],max);
+        }
+        return dp[k];
     }
 }
