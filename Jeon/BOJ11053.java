@@ -7,23 +7,40 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BOJ11053 {
-    public void BOJ11053_start() throws IOException {
+    static int arr[];
+    static Integer dp[];
+    static int max;
+
+    static int cnt;
+    public void solution() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String str = br.readLine();
         int n = Integer.parseInt(str);
-        List<Integer> arr = new ArrayList<Integer>();
+        arr = new int[n];
+        dp = new Integer[n];
         String input = br.readLine();
         String[] inputs = input.split(" ");
-        int max = 0;
-        int cnt = 0;
+        cnt = 0;
         for(int i=0; i<n; i++){
-            int val = Integer.parseInt(inputs[i]);
-            if(max >= val) continue;
-            else{
-                max = val;
-                cnt += 1;
+            arr[i] = Integer.parseInt(inputs[i]);
+        }
+        dp[0] = 1;
+        max = 1;
+        cnt = 1;
+        for(int i=0; i<n; i++){
+            max = Math.max(recursive(i),max);
+        }
+        System.out.println(max);
+    }
+    static int recursive(int k){
+        if(dp[k] == null){
+            dp[k] = 1;
+            for(int i=k-1; i>=0; i--){
+                if(arr[i] < arr[k]){
+                    dp[k] = Math.max(dp[k],recursive(i)+1);
+                }
             }
         }
-        System.out.println(cnt);
+        return dp[k];
     }
 }
