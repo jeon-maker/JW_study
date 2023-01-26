@@ -85,3 +85,10 @@ dp[k] = Math.max(d[[k], reculsive(i) + 1)
 ![image](https://user-images.githubusercontent.com/77326600/214796257-a7fbc47b-6ece-4306-bcf0-e85e512f8a73.png)
 
 모든 dp원소에 대한 값이 채워지지 않아도 정답을 맞출 수 있다 ! 조건에 맞는 원소들만 딱 딱 골라서 해결해주면 된다.
+
+
+6.[BOJ9095](https://github.com/jeon-maker/JW_study/blob/main/Jeon/BOJ9095.java)
+
+
+규칙을 찾는게 중요한 문제. DP를 풀 때는 규칙을 찾으려고 노력해보자.
+규칙만 찾으면 코드가 쉽게 이해될 수 있다.
