@@ -108,3 +108,13 @@ dp[k] = Math.max(d[[k], reculsive(i) + 1)
 
 **점화식을 발견하면 DP는 풀 수 있다. 점화식은 함수 형태로 만들 수도 있고, dp 배열 형태로 만들 수도 있다.**
 
+
+9.[BOJ2579](https://github.com/jeon-maker/JW_study/blob/main/Jeon/BOJ2579.java)
+
+[문제](https://www.acmicpc.net/problem/2579)
+
+![image](https://user-images.githubusercontent.com/77326600/215072244-a1de37e4-a1f8-460d-b377-9437c8232b61.png)
+
+실패했던 이유이다. 표시된 부분에서 arr[k-1]이 아니라 dp[k-1] 를 사용했었는데, 그럴 경우에는 연속된 dp를 채워주기 때문에 3칸을 연속으로 밟으면 안된다는 문제 조건에 위반한다.
+
+따라서 재귀방식을 사용할 때 k를 받아왔으면 dp[k-3] + arr[k-1] + arr[k] 와 dp[k-2] + arr[k] 를 비교해주면 된다.
