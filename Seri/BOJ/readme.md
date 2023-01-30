@@ -17,9 +17,9 @@ https://docs.google.com/spreadsheets/d/1PX_BP5jkqzeqn1VHFJa1YVmdoJ7DKAYG5Qhd76uH
 |1월 19일 목요일	|	2477번 참외밭|	구현	|실버 2|[백준](https://www.acmicpc.net/problem/2477)|[블로그]()|
 |1월 20일 금요일	|	14247번 나무 자르기|	구현	|실버 2|[백준](https://www.acmicpc.net/problem/14247)|[블로그](https://aristudy.tistory.com/94)|
 |1월 26일 목요일	|	1138번 한 줄로 서기 </p> 9095번 1,2,3 더하기 |	구현	</p> DP |실버 2 </p> 실버 3|[백준](https://www.acmicpc.net/problem/1138) </p> [백준](https://www.acmicpc.net/problem/9095)|[블로그]() </p> [블로그](https://aristudy.tistory.com/96)|
-|1월 27일 금요일 |	17202번 핸드폰 번호 궁합|	DP|	브론즈 1|[백준](https://www.acmicpc.net/problem/17202)|[블로그](https://aristudy.tistory.com/97)|
-|   |   |   ||[백준]()|[블로그]()|
-|   |   |   ||[백준]()|[블로그]()|
-|   |   |   ||[백준]()|[블로그]()|
-|   |   |   ||[백준]()|[블로그]()|
+|1월 27일 금요일 |	17202번 핸드폰 번호 궁합 |	DP|	브론즈 1|[백준](https://www.acmicpc.net/problem/17202)|[블로그](https://aristudy.tistory.com/97)|
+|   | 2579번 계단 오르기  |  DP | 실버 3 |[백준](https://www.acmicpc.net/problem/2579)|[블로그]()|
+|   | 9657번 돌 게임3  |  DP | 실버 3 |[백준](https://www.acmicpc.net/problem/9657)|[블로그]()|
+|   |   |   |  |[백준]()|[블로그]()|
+|   |   |   |  |[백준]()|[블로그]()|
 
