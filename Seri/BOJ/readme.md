@@ -20,6 +20,6 @@ https://docs.google.com/spreadsheets/d/1PX_BP5jkqzeqn1VHFJa1YVmdoJ7DKAYG5Qhd76uH
 |1월 27일 금요일 |	17202번 핸드폰 번호 궁합 |	DP|	브론즈 1|[백준](https://www.acmicpc.net/problem/17202)|[블로그](https://aristudy.tistory.com/97)|
 |   | 2579번 계단 오르기  |  DP | 실버 3 |[백준](https://www.acmicpc.net/problem/2579)|[블로그](https://aristudy.tistory.com/98)|
 |   | 9657번 돌 게임3  |  DP | 실버 3 |[백준](https://www.acmicpc.net/problem/9657)|[블로그]()|
-|   |   |   |  |[백준]()|[블로그]()|
+|2월 9일 목요일 | 둘만의 암호 |   |  lv.1 |[프로그래머스](https://school.programmers.co.kr/learn/courses/30/lessons/155652)|[블로그](https://aristudy.tistory.com/100)|
 |   |   |   |  |[백준]()|[블로그]()|
 
